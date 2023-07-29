@@ -10,7 +10,7 @@ burger.addEventListener('click', () => {
 //Tech Stack
 
 stack = document.querySelector(".stack__card")
-techStacks = [["JavaScript", "javascript"],["HTML","html"],["CSS", "css"] ,["ExpressJS","express"],["Figma", "figma"],["BootStrap", "bootstrap"],["TypeScript", "typescript"],["react","React"],["Node", "node"],["NestJS","nestjs"],["MySQL","mysql" ],["Firebase", "firebase"], ["MongoDB","mongodb"],["Python", "python"], ["C", "c"], ["Java", "java"], ["Flutter", "flutter"],["Git", "git"], ["MipsAssembly", "assembly"]]
+techStacks = [["JavaScript", "javascript"],["HTML","html"],["CSS", "css"] ,["ExpressJS","express"],["BootStrap", "bootstrap"],["TypeScript", "typescript"],["react","React"],["Node", "node"],["NestJS","nestjs"],["MySQL","mysql" ],["Firebase", "firebase"], ["MongoDB","mongodb"],["Python", "python"], ["C", "c"], ["Java", "java"], ["Flutter", "flutter"],["Git", "git"], ["MipsAssembly", "assembly"]]
 stack && ( 
     techStacks.forEach(element => {
     imge = `asset/${element[1]}.png`
