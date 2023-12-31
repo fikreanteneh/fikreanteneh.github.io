@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: comic;
+  src: url("./assets/fonts/Ldfcomicsans-jj7l.ttf");
+}
+
+body {
+  font-family: comic, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  margin: 0.5rem;
+  background-image: url("./assets/images/background2.jpg");
+  background-attachment: fixed;
+  background-color: rgb(16, 17, 18);
+  color: white;
+}
+
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
