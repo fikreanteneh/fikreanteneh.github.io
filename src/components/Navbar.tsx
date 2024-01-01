@@ -1,18 +1,28 @@
 import styled from "@emotion/styled";
+import { IconType } from "react-icons";
+import { GoProjectRoadmap } from "react-icons/go";
+import { IoHome } from "react-icons/io5";
+import { MdContacts, MdOutlineWorkHistory } from "react-icons/md";
 import { NavLink, useLocation } from "react-router-dom";
 import { colors } from "../themes";
-
 
 
 const HeaderStyle = styled.header`
   display: flex;
   justify-content: space-between;
+    @media (max-width: 840px) {
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 
 const Logo = styled.h1`
 font-size: 2rem;
 font-weight: 700;
 color: 	${colors.primary};
+  @media (max-width: 840px) {
+    display: none;
+  }
 `
 
 const UlStyle = styled.ul`
@@ -37,8 +47,31 @@ const NavLinkStyle = styled(NavLink) <{ active: boolean }>`
 
 `
 
-const Navbar = () => {
+const SpanStyle = styled.span`
+  @media (max-width: 840px) {
+    display: none;
+  }
+`;
+
+type NavComponentType = {
+    to: string;
+    icon: IconType;
+    text: string;
+}
+
+const NavComponent: React.FC<NavComponentType> = (prop) => {
     const location = useLocation();
+    return (
+        <NavLinkStyle
+            active={location.pathname == prop.to}
+            to={prop.to}>
+            <prop.icon style={{ padding: "0 6px" }} />
+            <SpanStyle>{prop.text}</SpanStyle>
+        </NavLinkStyle>
+    )
+}
+
+const Navbar = () => {
     return (
         <HeaderStyle>
             <div>
@@ -46,10 +79,10 @@ const Navbar = () => {
             </div>
             <nav>
                 <UlStyle>
-                    <NavLinkStyle to={"/home"} active={location.pathname == "/home"}>Home</NavLinkStyle>
-                    <NavLinkStyle to={"/experience"} active={location.pathname == "/experience"}>Experience</NavLinkStyle>
-                    <NavLinkStyle to={"/projects"} active={location.pathname == "/projects"}>Projects</NavLinkStyle>
-                    <NavLinkStyle to={"/contact"} active={location.pathname == "/contact"}>Contact</NavLinkStyle>
+                    <NavComponent to={"/home"} icon={IoHome} text={"Home"} />
+                    <NavComponent to={"/experience"} icon={MdOutlineWorkHistory} text={"Experience"} />
+                    <NavComponent to={"/projects"} icon={GoProjectRoadmap} text={"Projects"} />
+                    <NavComponent to={"/contact"} icon={MdContacts} text={"Contact"} />
                 </UlStyle>
             </nav>
 

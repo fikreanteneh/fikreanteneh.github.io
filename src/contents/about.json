@@ -1,0 +1,53 @@
+
+{
+    "intro": "A fourth year software engineering student at AAU whose is interested in CS, mathematics and engineering. I am always working to improve of myself and society . My future goal is to solve problems ravaging our country using science and technology.\nI am a enthusiastic and motivated full stack developer, competetive programmer and problem solver. I have an experience developing website and designning databases. Currently I am looking for opportunities to apply my technical skills on real world project. I am always responsible for I do and I am up for any challenge.",
+    "address": {
+        "phone": "+251 940229161",
+        "email1": "fikre.anteneh01@gmail.com",
+        "email2": "fikremariam.a.asegie@gmail.com",
+        "address": "King George VI St, Addis Ababa, Ethiopia"
+    },
+    "quicklinks": {
+        "resume": {"url": "https://drive.google.com/file/d/1g_kA8hf0ofIH8z94DMZZ2M4mu-8UjhIm/view?usp=sharing"},
+        "phone": {"url": "tel:+251940229161"},
+        "email": {"url": "mailto:fikre.anteneh01@gmail.com"},
+        "github": {"url": "https://github.com/fikre_anteneh"},
+        "linkedin": {"url": "https://www.linkedin.com/in/fikremariamanteneh/"},
+        "telegram": {"url": "https://t.me/Fik1ant"},
+        "twitter": {"url": "https://twitter.com/fikreanteneh"},
+        "leetcode": {"url": "https://leetcode.com/fikre_anteneh/"},
+        "codeforces": {"url": "https://codeforces.com/profile/fikre.anteneh"},
+        "location": {"url": "https://maps.app.goo.gl/5nEasUU66W1CN2fT6"}
+    },
+    "links": [
+        {
+            "name": "Resume",
+            "url": "https://drive.google.com/file/d/1g_kA8hf0ofIH8z94DMZZ2M4mu-8UjhIm/view?usp=sharing"
+        },
+        {
+            "name": "Github",
+            "url": "https://github.com/fikre_anteneh"
+        },
+        {
+            "name": "LinkedIn",
+            "url": "https://www.linkedin.com/in/fikremariamanteneh/"
+        },
+        {
+            "name": "LeetCode",
+            "url": "https://leetcode.com/fikre_anteneh/"
+        },
+        {
+            "name": "Codeforces",
+            "url": "https://codeforces.com/profile/fikre.anteneh"
+
+        },
+        {
+            "name": "Twitter",
+            "url": "https://twitter.com/fikreanteneh"
+        },
+        {
+            "name": "Telegram",
+            "url": "https://t.me/Fik1ant"
+        }
+    ]
+}
