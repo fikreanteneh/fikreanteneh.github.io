@@ -1,12 +1,12 @@
 
-import 'react-toastify/dist/ReactToastify.css';
-import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom'
-import RootLayout from './layouts/RootLayout'
-import Contact from './pages/Contact'
-import Experience from './pages/Experience'
-import Home from './pages/Home'
-import Projects from './pages/Projects'
+import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import RootLayout from './layouts/RootLayout';
+import Contact from './pages/Contact';
+import Experience from './pages/Experience';
+import Home from './pages/Home';
+import Projects from './pages/Projects';
 
 
 const Router = createBrowserRouter(
@@ -21,10 +21,7 @@ const Router = createBrowserRouter(
         <Route path="*" element={<Navigate to="/home" />} />
       </Route>
     </>
-
-
   )
-
 )
 
 function App() {

@@ -1,12 +1,13 @@
 import styled from "@emotion/styled";
+import React from "react";
 import { IconType } from "react-icons";
 import { FaPhone } from "react-icons/fa6";
-import { IoLocation } from "react-icons/io5";
+import { IoCopy, IoLocation } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import Asset from "../assets";
+import { toast } from "react-toastify";
+import { default as Asset } from "../assets";
 import about from "../contents/about.json";
 import { colors } from "../themes";
-import { toast } from "react-toastify";
 
 
 const HomeDiv = styled.div`
@@ -69,44 +70,53 @@ const QuickLinks = styled.p`
 `
 
 const QuickLinkComponent: React.FC<{ icon: IconType, text: string, link: string }> = (prop) => {
-
   return (
-    <QuickLinks onClick={() => { navigator.clipboard.writeText(prop.text); toast.success("Copied to Clipboard!") }}>
-      <prop.icon />
-      <span style={{ padding: "0 5px" }}>
-        {prop.text}
-      </span>
-    </QuickLinks>
+    <p className="w-auto py-1 text-base text-lg no-underline cursor-pointer" >
+      <prop.icon className="inline-block" />
+      <a href={prop.link} className="inline-block px-1 hover:text-primary">{prop.text}</a>
+      <IoCopy className="inline-block hover:text-primary" onClick={() => { navigator.clipboard.writeText(prop.text); toast.success("Copied to Clipboard!") }} />
+    </p>
 
   )
 }
 
-// const ImportantLink = 
+const Links: React.FC<{ icon: string, text: string, link: string }> = (prop) => {
+  return (
+    <button className="p-5 text-lg cursor-pointer text-primary" onClick={() => { window.open(prop.link, '_blank'); }}>
+      <prop.icon className="inline-block" />
+      <p className="inline-block px-1 hover:text-primary">{prop.text}</p>
+    </button>
+
+  )
+
+}
 
 const Home = () => {
   return (
     <>
-      <HomeDiv>
-        <AboutDiv>
-          <h1 style={{ textAlign: "center", fontSize: "2.8rem" }}>Hi there! I am <span style={{
-            color: colors.primary,
-            fontWeight: 700
-          }}>Firemariam A.Asegie</span></h1>
-          <p style={{ textAlign: "justify", fontSize: "1.2rem" }}>{about.intro}</p>
+      <div className="grid items-center justify-center grid-cols-2 gap-8 m-auto my-8">
+        <div className="p-8 mx-auto border-4 border-white max-w">
+          <h1 className="my-4 text-5xl text-center">Hi there! I am&nbsp;<span className="font-bold text-primary">Firemariam A.Asegie</span></h1>
+          <p className="text-xl text-justify">{about.intro}</p>
           <br />
-          <div style={{ display: "flex", gap: "1rem", justifyContent: "center", flexWrap: "wrap" }}>
+          <div className="flex flex-col flex-wrap justify-center p-0 m-0">
             <QuickLinkComponent icon={FaPhone} text={about.address.phone} link={about.quicklinks.phone.url} />
             <QuickLinkComponent icon={MdEmail} text={about.address.email1} link={about.quicklinks.email.url} />
             <QuickLinkComponent icon={IoLocation} text={about.address.address} link={about.quicklinks.location.url} />
           </div>
-        </AboutDiv>
+        </div>
         <div style={{ margin: "auto" }}>
           <HomeImg src={Asset.Images.Profile} alt="Fikremariam Anteneh Asegie" />
         </div>
-      </HomeDiv>
-      <div>
+      </div>
+      <div className="flex flex-wrap justify-between">
 
-
+        {/* <Links icon={assets.Icons.Resume} link={about.links[0].url} text={about.links[0].name}></Links>
+        <Links icon={assets.Icons.Github} link={about.links[1].url} text={about.links[1].name}></Links>
+        <Links icon={assets.Icons.Linkedin} link={about.links[2].url} text={about.links[2].name}></Links>
+        <Links icon={assets.Icons.Leetcode} link={about.links[3].url} text={about.links[3].name}></Links>
+        <Links icon={assets.Icons.Codeforces} link={about.links[4].url} text={about.links[4].name}></Links>
+        <Links icon={assets.Icons.Telegram} link={about.links[5].url} text={about.links[5].name}></Links> */}
       </div>
     </>
   )

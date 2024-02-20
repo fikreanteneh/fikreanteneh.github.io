@@ -2,6 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
+@layer base {
+  :root {
+    --color-base: #ffffff;
+    --color-primary: #e34f00;
+  }
+  .theme-orange {
+    --color-base: #ffffff;
+    --color-primary: #e34f00;
+  }
+  .theme-green {
+    --color-base: #ffffff;
+    --color-primary: #26e300;
+  }
+  .theme-blue {
+    --color-base: #ffffff;
+    --color-primary: #2258ee;
+  }
+}
+
 @font-face {
   font-family: comic;
   src: url("./assets/fonts/Ldfcomicsans-jj7l.ttf");
@@ -15,7 +34,6 @@ body {
   background-color: rgb(16, 17, 18);
   color: white;
 }
-
 
 @keyframes move {
   0% {
