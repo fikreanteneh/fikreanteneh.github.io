@@ -2,6 +2,7 @@
 import { Navigate, Route, RouterProvider, createBrowserRouter, createRoutesFromElements } from 'react-router-dom';
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import UseTheme, { ThemeProvider } from './ThemeProvider';
 import RootLayout from './layouts/RootLayout';
 import Contact from './pages/Contact';
 import Experience from './pages/Experience';
@@ -25,12 +26,11 @@ const Router = createBrowserRouter(
 )
 
 function App() {
-
   return (
-    <>
-      <RouterProvider router={Router} />
-      <ToastContainer autoClose={500} />
-    </>
+    <ThemeProvider>
+        <RouterProvider router={Router} />
+        <ToastContainer autoClose={500} />
+    </ThemeProvider>
   )
 }
 

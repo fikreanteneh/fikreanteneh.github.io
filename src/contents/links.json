@@ -1,0 +1,35 @@
+{
+  "AddressLinks": {
+    "Phone": { "URL": "tel:+251940229161" },
+    "Email": { "URL": "mailto:fikre.anteneh01@gmail.com" },
+    "Email2": { "URL": "mailto:fikremariam.a.asegie@gmail.com" },
+    "Location": { "URL": "https://maps.app.goo.gl/5nEasUU66W1CN2fT6" }
+  },
+  "QuickLinks": {
+    "Resume": {
+      "Name": "Resume",
+      "URL": "https://drive.google.com/file/d/1g_kA8hf0ofIH8z94DMZZ2M4mu-8UjhIm/view?usp=sharing"
+    },
+    "Github": {
+      "Name": "GitHub",
+      "URL": "https://github.com/fikreanteneh"
+    },
+    "Linkedin": {
+      "Name": "LinkedIn",
+      "URL": "https://www.linkedin.com/in/fikremariamanteneh/"
+    },
+    "Telegram": { "Name": "Telegram", "URL": "https://t.me/Fik1ant" },
+    "Leetcode": {
+      "URL": "https://leetcode.com/fikre_anteneh/",
+      "Name": "Leetcode"
+    },
+    "Codeforces": {
+      "Name": "Codeforces",
+      "URL": "https://codeforces.com/profile/fikre.anteneh"
+    },
+    "Twitter": {
+      "Name": "Twitter",
+      "URL": "https://twitter.com/fikre_anteneh"
+    }
+  }
+}

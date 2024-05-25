@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       textColor: {
-        base: "var(--color-base)",
+        main: "var(--color-main)",
         primary: "var(--color-primary)",
       },
       colors: {

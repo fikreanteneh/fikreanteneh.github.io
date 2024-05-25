@@ -1,57 +1,15 @@
-import styled from "@emotion/styled";
 import { IconType } from "react-icons";
+import { FaCircle } from "react-icons/fa6";
 import { GoProjectRoadmap } from "react-icons/go";
 import { IoHome } from "react-icons/io5";
-import { MdContacts, MdOutlineWorkHistory } from "react-icons/md";
+import { MdContacts, MdDarkMode, MdLightMode, MdOutlineWorkHistory } from "react-icons/md";
 import { NavLink, useLocation } from "react-router-dom";
-import { colors } from "../themes";
+import UseTheme, { accentColors, darkTheme, lightTheme, ThemeContextType } from "../ThemeProvider";
 
 
-const HeaderStyle = styled.header`
-  display: flex;
-  justify-content: space-between;
-    @media (max-width: 840px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`;
 
-const Logo = styled.h1`
-font-size: 2rem;
-font-weight: 700;
-color: 	${colors.primary};
-  @media (max-width: 840px) {
-    display: none;
-  }
-`
 
-const UlStyle = styled.ul`
-    display: flex;
-    list-style: none;
-    align-items: center;
-    gap: 1.2rem;
-    justify-content: space-between;
-    font-size: 1.5rem;
-`
 
-const NavLinkStyle = styled(NavLink) <{ active: boolean }>`
-    text-decoration: none;
-    padding: 0.2rem;
-    color: ${props => props.active ? colors.primary : "white"};
-    cursor: pointer;
-     &:hover{
-        color: white;
-        background-color: ${colors.primary};
-        border-radius: 0.5rem;
-    }
-
-`
-
-const SpanStyle = styled.span`
-  @media (max-width: 840px) {
-    display: none;
-  }
-`;
 
 type NavComponentType = {
     to: string;
@@ -62,31 +20,57 @@ type NavComponentType = {
 const NavComponent: React.FC<NavComponentType> = (prop) => {
     const location = useLocation();
     return (
-        <NavLinkStyle
-            active={location.pathname == prop.to}
+        <NavLink
+            className={`px-1 hover:text-main hover:bg-primary rounded-lg ${location.pathname == prop.to ? "text-primary" : "text-main"}`}
             to={prop.to}>
-            <prop.icon style={{ padding: "0 6px" }} />
-            <SpanStyle>{prop.text}</SpanStyle>
-        </NavLinkStyle>
+            <prop.icon className="inline" />
+            <span className="hidden pl-2 md:inline">{prop.text}</span>
+        </NavLink>
     )
 }
 
 const Navbar = () => {
+    const theme = UseTheme() as ThemeContextType;
     return (
-        <HeaderStyle>
+        <header className="flex justify-between md:items-center">
             <div>
-                <Logo>Fikremariam</Logo>
+                <h1 className="hidden text-3xl font-bold text-primary md:block">Fikremariam</h1>
             </div>
             <nav>
-                <UlStyle>
+                <ul className="flex items-center justify-between gap-6 text-lg">
                     <NavComponent to={"/home"} icon={IoHome} text={"Home"} />
                     <NavComponent to={"/experience"} icon={MdOutlineWorkHistory} text={"Experience"} />
                     <NavComponent to={"/projects"} icon={GoProjectRoadmap} text={"Projects"} />
                     <NavComponent to={"/contact"} icon={MdContacts} text={"Contact"} />
-                </UlStyle>
+                </ul>
             </nav>
+            <div className="flex">
 
-        </HeaderStyle>
+                <select id="theme-selector"
+                    className="text-3xl"
+                    value={theme.currentAccentColor}
+                    onChange={(e) => { theme.changeAccentColor(e.target.value) }}>
+                    {
+                        accentColors.map((color) => {
+                            return (
+                                <option value={color} className={`${color} bg-primary`}>
+                                    <FaCircle className="p-1 rounded-full" />
+                                </option>
+                            )
+                        })
+                    }
+                </select>
+
+                <div className="p-1 mx-auto my-auto text-3xl border-2 border-transparent rounded-full text-main hover:text-primary">
+                    {
+                        theme.currentThemeColor === darkTheme
+                            ? <MdDarkMode onClick={() => theme.changeThemeColor(lightTheme)} />
+                            : <MdLightMode onClick={() => theme.changeThemeColor(darkTheme)} />
+                    }
+                </div>
+            </div>
+
+        </header>
     )
 }
 

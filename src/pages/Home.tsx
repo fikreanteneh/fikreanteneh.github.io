@@ -1,122 +1,76 @@
-import styled from "@emotion/styled";
-import React from "react";
-import { IconType } from "react-icons";
 import { FaPhone } from "react-icons/fa6";
-import { IoCopy, IoLocation } from "react-icons/io5";
+import { IoLocation } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
-import { toast } from "react-toastify";
-import { default as Asset } from "../assets";
-import about from "../contents/about.json";
-import { colors } from "../themes";
+import { TypeAnimation } from "react-type-animation";
+import Assets, { default as Asset } from "../assets";
+import Education from "../components/Education";
+import { AddressLink, LinkButton } from "../components/common/QuickLinks";
+import Content from "../contents";
 
+const links = [
+  { icon: Assets.Icons.Resume, link: Content.Links.QuickLinks.Resume.URL, text: Content.Links.QuickLinks.Resume.Name },
+  { icon: Assets.Icons.Github, link: Content.Links.QuickLinks.Github.URL, text: Content.Links.QuickLinks.Github.Name },
+  { icon: Assets.Icons.Linkedin, link: Content.Links.QuickLinks.Linkedin.URL, text: Content.Links.QuickLinks.Linkedin.Name },
+  { icon: Assets.Icons.Leetcode, link: Content.Links.QuickLinks.Leetcode.URL, text: Content.Links.QuickLinks.Leetcode.Name },
+  { icon: Assets.Icons.Codeforces, link: Content.Links.QuickLinks.Codeforces.URL, text: Content.Links.QuickLinks.Codeforces.Name },
+  { icon: Assets.Icons.Telegram, link: Content.Links.QuickLinks.Telegram.URL, text: Content.Links.QuickLinks.Telegram.Name },
+];
 
-const HomeDiv = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 2rem;
-  align-items: center;
-  justify-content: center;
-  margin: 4rem auto;
-  @media (max-width: 840px) {
-    grid-template-columns: 1fr;
-      & > :nth-child(2) {
-    order: -1;
-  }
-  }
-`
-
-const AboutDiv = styled.div`
-  max-width: 720x;
-  margin: 0 auto;
-  padding: 2rem;
-  border: 3px solid white;
-`
-
-
-
-const HomeImg = styled.img`
-  width: auto;
-  height: auto;
-  max-height: 60vh;
-  object-fit: cover;
-  border-radius: 10%;
-  position: relative;
-  // animation: moveImage 5s infinite;
-  // @keyframes moveImage {
-  //   0% { 
-  //     transform: translateX(0); 
-  //     opacity: 1;
-  //   }
-  //   50% { 
-  //     transform: translateX(calc(100%)); 
-  //     opacity: 1;
-  //   }
-  //   100% { 
-  //     transform: translateX(0); 
-  //     opacity: 0;
-  //   }
-  // }
-`
-
-const QuickLinks = styled.p`
-  text-decoration: none;
-  color: white;
-  font-size: 1.2rem;
-  cursor: pointer;
-  &:hover {
-    color: ${colors.primary};
-  }
-  
-`
-
-const QuickLinkComponent: React.FC<{ icon: IconType, text: string, link: string }> = (prop) => {
-  return (
-    <p className="w-auto py-1 text-base text-lg no-underline cursor-pointer" >
-      <prop.icon className="inline-block" />
-      <a href={prop.link} className="inline-block px-1 hover:text-primary">{prop.text}</a>
-      <IoCopy className="inline-block hover:text-primary" onClick={() => { navigator.clipboard.writeText(prop.text); toast.success("Copied to Clipboard!") }} />
-    </p>
-
-  )
-}
-
-const Links: React.FC<{ icon: string, text: string, link: string }> = (prop) => {
-  return (
-    <button className="p-5 text-lg cursor-pointer text-primary" onClick={() => { window.open(prop.link, '_blank'); }}>
-      <prop.icon className="inline-block" />
-      <p className="inline-block px-1 hover:text-primary">{prop.text}</p>
-    </button>
-
-  )
-
-}
+const educations = [
+  { ...Content.Education.AAU, image: Assets.Images.AAU },
+  { ...Content.Education.A2SV, image: Assets.Images.A2SV },
+  { ...Content.Education.ALX, image: Assets.Images.ALX }
+]
 
 const Home = () => {
+
+  console.log(educations)
+
   return (
     <>
-      <div className="grid items-center justify-center grid-cols-2 gap-8 m-auto my-8">
-        <div className="p-8 mx-auto border-4 border-white max-w">
-          <h1 className="my-4 text-5xl text-center">Hi there! I am&nbsp;<span className="font-bold text-primary">Firemariam A.Asegie</span></h1>
-          <p className="text-xl text-justify">{about.intro}</p>
+      <div className="grid items-center justify-center grid-cols-2 gap-8 m-auto">
+
+        <div className="p-8 mx-auto max-w">
+
+          <h1 className="my-8 text-5xl text-center text-main">Hi there! I am&nbsp;
+            <span className="font-bold text-primary">
+              Firemariam A.Asegie
+            </span>
+          </h1>
+          {/* <p className="my-8 text-5xl text-center text-main">Welcome to My Portfolio</p> */}
+
+          <h1 className="my-8 text-5xl text-center text-main">
+            <img src={Assets.Icons.Rocket} className="inline-block h-12" alt="Rocket" />
+            <span className="font-bold text-primary">
+              <TypeAnimation
+                sequence={Content.About.Titles.flatMap((title) => ["A " + title, 100])}
+                repeat={Infinity}
+              />
+            </span>
+          </h1>
+          <p className="text-xl text-justify text-main">{Content.About.AboutMe}</p>
           <br />
           <div className="flex flex-col flex-wrap justify-center p-0 m-0">
-            <QuickLinkComponent icon={FaPhone} text={about.address.phone} link={about.quicklinks.phone.url} />
-            <QuickLinkComponent icon={MdEmail} text={about.address.email1} link={about.quicklinks.email.url} />
-            <QuickLinkComponent icon={IoLocation} text={about.address.address} link={about.quicklinks.location.url} />
+            <AddressLink icon={FaPhone} text={Content.About.Addresses.Phone} link={Content.About.AddressLinks.Phone.URL} />
+            <AddressLink icon={MdEmail} text={Content.About.Addresses.Email} link={Content.About.AddressLinks.Email.URL} />
+            <AddressLink icon={IoLocation} text={Content.About.Addresses.Location} link={Content.About.AddressLinks.Location.URL} />
           </div>
         </div>
         <div style={{ margin: "auto" }}>
-          <HomeImg src={Asset.Images.Profile} alt="Fikremariam Anteneh Asegie" />
+          <img className="w-auto h-auto max-h-[60vh] object-cover rounded-[10%] relative" src={Asset.Images.Profile} alt="Fikremariam Anteneh Asegie" />
         </div>
       </div>
-      <div className="flex flex-wrap justify-between">
+      <div className="grid grid-cols-1 gap-4 mx-auto my-16 md:grid-cols-3 max-w-7xl">
+        {links.map((link) => (
+          <LinkButton key={link.text} icon={link.icon} link={link.link} text={link.text} />
+        ))}
+      </div>
+      <div>
+        <p className="my-8 text-5xl text-center text-main">Education</p>
+        {educations.map(education => {
+          return <Education key={education.Name} education={education} />
+        })}
 
-        {/* <Links icon={assets.Icons.Resume} link={about.links[0].url} text={about.links[0].name}></Links>
-        <Links icon={assets.Icons.Github} link={about.links[1].url} text={about.links[1].name}></Links>
-        <Links icon={assets.Icons.Linkedin} link={about.links[2].url} text={about.links[2].name}></Links>
-        <Links icon={assets.Icons.Leetcode} link={about.links[3].url} text={about.links[3].name}></Links>
-        <Links icon={assets.Icons.Codeforces} link={about.links[4].url} text={about.links[4].name}></Links>
-        <Links icon={assets.Icons.Telegram} link={about.links[5].url} text={about.links[5].name}></Links> */}
       </div>
     </>
   )

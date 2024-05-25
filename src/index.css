@@ -4,20 +4,34 @@
 
 @layer base {
   :root {
-    --color-base: #ffffff;
+    --color-main: #ffffff;
     --color-primary: #e34f00;
+    background-image: url("./assets/images/background_dark.jpg");
   }
+
+  .theme-dark {
+    --color-main: #ffffff;
+    background-image: url("./assets/images/background_dark.jpg");
+  }
+  .theme-light {
+    --color-main: #000000;
+    background-image: url("./assets/images/background_light.jpg");
+  }
+
   .theme-orange {
-    --color-base: #ffffff;
     --color-primary: #e34f00;
   }
   .theme-green {
-    --color-base: #ffffff;
     --color-primary: #26e300;
   }
   .theme-blue {
-    --color-base: #ffffff;
     --color-primary: #2258ee;
+  }
+  .theme-yellow {
+    --color-primary: #f7ff04;
+  }
+  .theme-purple {
+    --color-primary: #b404ff;
   }
 }
 
@@ -28,8 +42,6 @@
 
 body {
   font-family: comic, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  margin: 0.5rem;
-  background-image: url("./assets/images/background2.jpg");
   background-attachment: fixed;
   background-color: rgb(16, 17, 18);
   color: white;
