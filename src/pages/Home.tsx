@@ -5,7 +5,7 @@ import { TypeAnimation } from "react-type-animation";
 import Assets, { default as Asset } from "../assets";
 import Education from "../components/Education";
 import { AddressLink, LinkButton } from "../components/common/QuickLinks";
-import Content from "../contents";
+import Content from "../data";
 
 const links = [
   { icon: Assets.Icons.Resume, link: Content.Links.QuickLinks.Resume.URL, text: Content.Links.QuickLinks.Resume.Name },

@@ -27,9 +27,9 @@ const Router = createBrowserRouter(
 
 function App() {
   return (
-    <ThemeProvider>
-        <RouterProvider router={Router} />
-        <ToastContainer autoClose={500} />
+    <ThemeProvider >
+      <RouterProvider router={Router} />
+      <ToastContainer autoClose={500} />
     </ThemeProvider>
   )
 }
