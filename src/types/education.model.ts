@@ -1,4 +1,4 @@
-export interface EducationModel {
+export default interface EducationModel {
   Name: string;
   ImageLink: string;
   Link: string;

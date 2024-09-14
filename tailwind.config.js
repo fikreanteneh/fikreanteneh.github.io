@@ -6,9 +6,16 @@ export default {
       textColor: {
         main: "var(--color-main)",
         primary: "var(--color-primary)",
+        hover: "var(--color-hover)",
+        background: "var(--color-background)",
+        reverse: "var(--color-reverse)",
       },
       colors: {
         primary: "var(--color-primary)",
+        hover: "var(--color-hover)",
+        main: "var(--color-main)",
+        background: "var(--color-background)",
+        reverse: "var(--color-reverse)",
       },
     },
   },

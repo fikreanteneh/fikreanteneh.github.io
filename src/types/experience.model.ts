@@ -1,4 +1,4 @@
-export interface ExperienceModel {
+export default interface ExperienceModel {
   Image: string;
   Title: string;
   Company: string;
@@ -12,3 +12,5 @@ export interface ExperienceModel {
     Link: string;
   }[];
 }
+
+

@@ -1,8 +1,8 @@
+import icons from "../assets/icons";
 import images from "../assets/images";
-import techstack from "../assets/techstack";
-import { ExperienceModel } from "../types/experience.model";
+import ExperienceModel from "../types/experience.model";
 
-const experience: ExperienceModel[] = [
+const Experience: ExperienceModel[] = [
   {
     Image: images.A2SV,
     Title: "Head Of Education",
@@ -48,10 +48,10 @@ const experience: ExperienceModel[] = [
       "Developed a GraphQL API for Dime.",
     ],
     Technologies: [
-      { Name: "Go", Link: techstack.go },
-      { Name: "PostgreSQL", Link: techstack.postgresql },
-      { Name: "GraphQL", Link: techstack.graphql },
-      { Name: "Git", Link: techstack.git },
+      { Name: "Go", Link: icons.go },
+      { Name: "PostgreSQL", Link: icons.postgresql },
+      { Name: "GraphQL", Link: icons.graphql },
+      { Name: "Git", Link: icons.git },
     ],
     Links: [
       {
@@ -74,10 +74,10 @@ const experience: ExperienceModel[] = [
       "Conducted testing with 87% coverage of API's features to ensure reliability and performance",
     ],
     Technologies: [
-      { Name: "ASP.NET Core", Link: techstack.cs },
-      { Name: "PostgreSQL", Link: techstack.postgresql },
-      { Name: "Swagger", Link: techstack.swagger },
-      { Name: "Git", Link: techstack.git },
+      { Name: "ASP.NET Core", Link: icons.cs },
+      { Name: "PostgreSQL", Link: icons.postgresql },
+      { Name: "Swagger", Link: icons.swagger },
+      { Name: "Git", Link: icons.git },
     ],
     Links: [
       {
@@ -88,4 +88,4 @@ const experience: ExperienceModel[] = [
   },
 ];
 
-export default experience;
+export default Experience;

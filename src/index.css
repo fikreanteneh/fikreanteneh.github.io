@@ -3,19 +3,19 @@
 @tailwind utilities;
 
 @layer base {
-  :root {
-    --color-main: #ffffff;
-    --color-primary: #e34f00;
-    background-image: url("./assets/images/background_dark.jpg");
-  }
-
   .theme-dark {
+    background-color: #000000;
     --color-main: #ffffff;
-    background-image: url("./assets/images/background_dark.jpg");
+    --color-reverse: #000000;
+    --color-hover: #888;
+    --color-background: #000000;
   }
   .theme-light {
+    background-color: #ffffff;
     --color-main: #000000;
-    background-image: url("./assets/images/background_light.jpg");
+    --color-reverse: #ffffff;
+    --color-hover: #888;
+    --color-background: #ffffff;
   }
 
   .theme-orange {
@@ -35,16 +35,8 @@
   }
 }
 
-@font-face {
-  font-family: comic;
-  src: url("./assets/fonts/Ldfcomicsans-jj7l.ttf");
-}
-
 body {
-  font-family: comic, Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
-  background-attachment: fixed;
-  background-color: rgb(16, 17, 18);
-  color: white;
+  font-family: "sans serif" Cambria, Cochin, Georgia, Times, "Times New Roman";
 }
 
 @keyframes move {
