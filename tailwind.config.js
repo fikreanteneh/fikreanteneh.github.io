@@ -5,6 +5,7 @@ export default {
     extend: {
       textColor: {
         main: "var(--color-main)",
+        "main-medium": "var(--color-main-medium)",
         primary: "var(--color-primary)",
         hover: "var(--color-hover)",
         background: "var(--color-background)",
@@ -14,6 +15,7 @@ export default {
         primary: "var(--color-primary)",
         hover: "var(--color-hover)",
         main: "var(--color-main)",
+        "main-medium": "var(--color-main-medium)",
         background: "var(--color-background)",
         reverse: "var(--color-reverse)",
       },

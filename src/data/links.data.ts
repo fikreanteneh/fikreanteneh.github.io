@@ -1,7 +1,7 @@
 import assets from "../assets";
 import LinkModel from "../types/links.model";
 
-const Links: Record<string, LinkModel> = {
+const LinksData: Record<string, LinkModel> = {
   Email: {
     Name: "Email",
     Description: "fikremariam.a.asegie@gmail.com",
@@ -64,4 +64,4 @@ const Links: Record<string, LinkModel> = {
   //   },
 };
 
-export default Links;
+export default LinksData;

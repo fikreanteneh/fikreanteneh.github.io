@@ -40,6 +40,7 @@ import Vscode from "./vscode.svg";
 import BitBucket from "./bitbucket.svg";
 import GCP from "./gcp.svg";
 import AWS from "./aws.svg";
+import Website from "./website.svg"
 export default {
   GCP,
   AWS,
@@ -83,4 +84,5 @@ export default {
   Cpp,
   Dart,
   Flutter,
+  Website
 };

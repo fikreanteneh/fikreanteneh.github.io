@@ -1,7 +1,7 @@
 import icons from "../assets/icons";
 import SkillModel from "../types/skills.model";
 
-const Skills: SkillModel[] = [
+const SkillsData: SkillModel[] = [
   {
     Name: "Python",
     Icon: icons.Python,
@@ -195,4 +195,4 @@ const Skills: SkillModel[] = [
   },
 ];
 
-export default Skills;
+export default SkillsData;

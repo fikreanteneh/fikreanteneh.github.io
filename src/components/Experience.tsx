@@ -1,6 +1,5 @@
 
 import React from 'react'
-import { ExperienceModel } from '../types/experience.model'
 
 const Experience = (props) => {
     const experience: ExperienceModel = props.experience

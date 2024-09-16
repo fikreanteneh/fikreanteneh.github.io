@@ -5,11 +5,12 @@ export default interface ExperienceModel {
   Location: string;
   StartDate: string;
   EndDate: string;
-  Description: string[];
-  Technologies: { Name: string; Link: string }[];
+  Bullets: string[];
+  TechStack: { Stack: string; Icon: string }[];
   Links: {
     Name: string;
-    Link: string;
+    URL: string;
+    Icon: string;
   }[];
 }
 

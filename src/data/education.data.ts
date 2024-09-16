@@ -1,7 +1,7 @@
 import images from "../assets/images";
 import EducationModel from "../types/education.model";
 
-const Education: EducationModel[] = [
+const EducationData: EducationModel[] = [
   {
     Name: "Addis Ababa University",
     ImageLink: images.AAU,
@@ -50,4 +50,4 @@ const Education: EducationModel[] = [
   },
 ];
 
-export default Education;
+export default EducationData;

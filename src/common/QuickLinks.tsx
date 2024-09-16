@@ -28,12 +28,13 @@ export const LinkButton: React.FC<{ icon: string, text: string, link: string }> 
     )
 }
 
-
-export const CustomButton: React.FC<{ icon: string, text: string, link: string }> = (prop) => {
+export const CustomButton: React.FC<{ icon?: string, text: string, link: string }> = (prop) => {
     return (
         <a href={prop.link} target="_blank" className="flex items-center p-1 space-x-1 transition-all duration-300 border rounded-lg cursor-pointer bg-main hover:bg-hover hover:shadow-md">
             {/* <div className="bg-white rounded-[50%] object-cover"> */}
-            <img className="h-4" src={prop.icon} alt="Icon" />
+            {prop.icon && (
+                <img className="h-4" src={prop.icon} alt="Icon" />
+            )}
             {/* </div> */}
             <p className="text-lg text-bold text-reverse">{prop.text}</p>
         </a>
