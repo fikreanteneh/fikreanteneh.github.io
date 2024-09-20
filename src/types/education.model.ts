@@ -1,6 +1,6 @@
 export default interface EducationModel {
   Name: string;
-  ImageLink: string;
+  Icon: string;
   Link: string;
   Description: string;
   Location: string;

@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
-import Contact from "../pages/Contact";
+import About from "../pages/About";
 import Education from "../pages/Education";
 import Experience from "../pages/Experience";
 import Projects from "../pages/Projects";
@@ -39,11 +39,11 @@ const Home = () => {
                     <Intro />
                 </div>
                 <div ref={scrollableRef} className="h-screen overflow-y-auto">
-                    <Projects />
                     <Experience />
+                    <Projects />
                     <Skills />
                     <Education />
-                    <Contact />
+                    <About />
                 </div>
             </div>
         </>

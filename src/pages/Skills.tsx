@@ -1,37 +1,48 @@
-import content from "../data"
+import { useState } from "react";
+import { FaTools } from "react-icons/fa";
+import { NormalIcon } from "../common/Icons";
+import { HeadlineLarge } from "../common/Text";
+import content from "../data";
+import { Chip } from './../common/Chips';
 
 
 const Skills = () => {
-    const categories = ["All", "Frontend", "Backend", "Mobile", "Database", "DevOps", "Tools", "Programming Language", "Framework", "Scripting", "System Programming"]
+    const [selected, setSelected] = useState<string[]>([]);
+    const changeSelected = (marked: string) => {
+        setSelected(prev => {
+            return prev.includes(marked)
+                ? prev.filter(c => c != marked)
+                : [...prev, marked]
+        })
+    }
+    const categories = ["Frontend", "Backend", "Mobile", "Database", "DevOps", "Tools", "Programming Language", "Framework", "Scripting", "System Programming"]
     return (
-        <div>
-            <div className="flex flex-col items-center justify-center min-h-screen">
-                <div>
-                    <h1 className="text-3xl font-bold">Technologies</h1>
-                    <select className="p-2 mt-4 border rounded">
-                        {categories.map((category) => (
-                            <option key={category} value={category}>
-                                {category}
-                            </option>
-                        ))}
-                    </select>
-                </div>
-                <ul className="flex flex-wrap justify-center w-10/12 my-8">
-                    {
-                        content.Skill.map((skill) => {
-                            return (
-                                <li className="flex flex-col items-center justify-center m-2">
-                                    <div className="p-1 w-12 h-12 rounded-[50%] bg-white">
-                                        <img className="" src={skill.Icon} alt={skill.Name} />
-                                    </div>
-                                    {/* <p className="mt-2 text-sm font-semibold text-center">{skill.Name}</p> */}
-                                    {/* TODO: On Hover */}
-                                </li>
-                            )
-                        })
-                    }
-                </ul>
+        <div id="skills">
+            <HeadlineLarge text={"Technologies"} Icon={FaTools} />
+            <div>
+                <Chip
+                    label="All"
+                    isSelected={selected.length == 0}
+                    onClick={() => { setSelected([]) }}
+                />
+                {categories.map((category) => <Chip
+                    label={category}
+                    isSelected={selected.includes(category)}
+                    onClick={() => changeSelected(category)}
+                />
+                )}
             </div>
+            <ul className="flex flex-wrap justify-center w-10/12 my-8">
+                {content.Skill.map((skill) => {
+                    if (selected.length > 0 && !skill.Category.some(category => selected.includes(category))) return null;
+                    return (
+                        <li className="flex flex-col justify-center rounded-[50%]">
+                            <NormalIcon icon={skill.Icon} scale={2} />
+                        </li>
+                    )
+                })
+                }
+            </ul>
         </div>
     )
 }

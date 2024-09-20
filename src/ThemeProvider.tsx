@@ -35,7 +35,7 @@ interface ThemeProviderProps {
 
 export const ThemeProvider: React.FC<ThemeProviderProps> = ({ children }) => {
     const [currentAccentColor, setCurrentAccentColor] =
-        useState<AccentColorTypes>(window.localStorage.currentAccentColor ?? "theme-orange");
+        useState<AccentColorTypes>(window.localStorage.currentAccentColor ?? "theme-green");
     const [currentThemeColor, setCurrentThemeColor] =
         useState<ThemeColorTypes>(window.localStorage.currentThemeColor ?? "theme-light");
 

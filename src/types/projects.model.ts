@@ -1,4 +1,5 @@
 export interface ProjectModel {
+    Icon: string;
     Name: string;
     Completed: boolean;
     Bullets: string[];

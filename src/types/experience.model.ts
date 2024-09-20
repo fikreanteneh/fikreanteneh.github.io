@@ -1,5 +1,5 @@
 export default interface ExperienceModel {
-  Image: string;
+  Icon: string;
   Title: string;
   Company: string;
   Location: string;

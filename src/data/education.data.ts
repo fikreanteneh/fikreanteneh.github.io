@@ -4,7 +4,7 @@ import EducationModel from "../types/education.model";
 const EducationData: EducationModel[] = [
   {
     Name: "Addis Ababa University",
-    ImageLink: images.AAU,
+    Icon: images.AAU,
     Link: "http://www.aait.edu.et/",
     Description: "13th Best University in Africa",
     Location: "Addis Ababa, Ethiopia",
@@ -22,7 +22,7 @@ const EducationData: EducationModel[] = [
   },
   {
     Name: "Africa to Silicon Valley (A2SV)",
-    ImageLink: images.A2SV,
+    Icon: images.A2SV,
     Link: "https://a2sv.org/",
     Description: "Backed by Google",
     Location: "Addis Ababa, Ethiopia",
@@ -38,7 +38,7 @@ const EducationData: EducationModel[] = [
   },
   {
     Name: "ALX Africa",
-    ImageLink: images.ALX,
+    Icon: images.ALX,
     Link: "https://www.alxafrica.com/",
     Description: "Africa's Biggest Online Education",
     Location: "Online",

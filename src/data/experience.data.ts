@@ -4,7 +4,7 @@ import ExperienceModel from "../types/experience.model";
 
 const ExperienceData: ExperienceModel[] = [
   {
-    Image: images.A2SV,
+    Icon: images.A2SV,
     Title: "Head Of Education",
     Company: "A2SV",
     Location: "Addis Ababa, Ethiopia",
@@ -25,7 +25,7 @@ const ExperienceData: ExperienceModel[] = [
   },
 
   {
-    Image: images.Superstars,
+    Icon: images.Superstars,
     Title: "Software Engineering Intern",
     Company: "Superstars",
     Location: "Remote, United States",
@@ -37,7 +37,7 @@ const ExperienceData: ExperienceModel[] = [
   },
 
   {
-    Image: images.Eskalate,
+    Icon: images.Eskalate,
     Title: "Software Engineering Intern Intern",
     Company: "Eskalate",
     Location: "Addis Ababa, Ethiopia",
@@ -64,7 +64,7 @@ const ExperienceData: ExperienceModel[] = [
   },
 
   {
-    Image: images.Eskalate,
+    Icon: images.Eskalate,
     Title: "Backend Development Intern",
     Company: "Eskalate",
     Location: "Addis Ababa, Ethiopia",

@@ -24,11 +24,12 @@ const temp: ProjectModel = {
         { Icon: assets.Icons.Github, URL: "kjsckn", Name: "GitHub" },
         { Icon: assets.Icons.Github, URL: "kjsckn", Name: "GitHub" }
     ],
-    Achievements: []
+    Achievements: [],
+    Icon: assets.Projects.portal
 }
 
 const ProjectsData: ProjectModel[] = [
-    temp, temp, temp, temp, temp, temp, temp, temp, temp, temp, temp, temp, temp, temp,
+    temp, temp, temp
 
 ]
 

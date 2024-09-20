@@ -1,38 +1,29 @@
 
-export const Headline1: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
+export const HeadlineLarge: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
     return (
-        <h2 className="my-4 text-3xl font-extrabold">
-            {Icon && <Icon className="inline" />}
-            {text}
+        <h2 className="flex items-center my-4 text-2xl font-extrabold">
+            {Icon && <Icon className="inline mr-1" />}
+            <span>{text}</span>
         </h2>
     );
 };
 
 
-export const Headline2: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
+export const HeadlineMedium: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
+    if (!Icon) return <h3 className="my-2 text-xl font-bold">{text}</h3>
     return (
-        <h2 className="my-4 text-2xl font-extrabold">
-            {Icon && <Icon className="inline" />}
+        <h3 className="my-2 text-xl font-bold">
+            {Icon && <Icon className="inline mr-1" />}
             {text}
-        </h2>
+        </h3>
     );
 };
-
-
-export const Headline3: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
+export const HeadlineSmall: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
     return (
-        <h2 className="my-2 text-xl font-bold">
-            {Icon && <Icon className="inline" />}
+        <h4 className="font-semibold"  >
+            {Icon && <Icon className="inline mr-1" />}
             {text}
-        </h2>
-    );
-};
-export const Headline4: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
-    return (
-        <h2 className="my-2 text-lg font-semibold"  >
-            {Icon && <Icon className="inline" />}
-            {text}
-        </h2>
+        </h4>
     );
 };
 
