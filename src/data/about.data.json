@@ -1,0 +1,21 @@
+{
+  "AboutMe": "A fourth year software engineering student at AAU whose is interested in CS, mathematics and engineering. I am always working to improve of myself and society . My future goal is to solve problems ravaging our country using science and technology.\nI am a enthusiastic and motivated full stack developer, competetive programmer and problem solver. I have an experience developing website and designning databases. Currently I am looking for opportunities to apply my technical skills on real world project. I am always responsible for I do and I am up for any challenge.",
+  "Titles": [
+    "Software Engineer",
+    "Backend Developer",
+    "Full Stack Developer",
+    "Mobile Developer"
+  ],
+  "Addresses": {
+    "Phone": "+251 940229161",
+    "Email": "fikre.anteneh01@gmail.com",
+    "Email2": "fikremariam.a.asegie@gmail.com",
+    "Location": "King George VI St, Addis Ababa, Ethiopia"
+  },
+  "AddressLinks": {
+    "Phone": { "URL": "tel:+251940229161" },
+    "Email": { "URL": "mailto:fikre.anteneh01@gmail.com" },
+    "Email2": { "URL": "mailto:fikremariam.a.asegie@gmail.com" },
+    "Location": { "URL": "https://maps.app.goo.gl/5nEasUU66W1CN2fT6" }
+  }
+}

@@ -1,0 +1,62 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  .theme-dark {
+    background-color: #191919;
+    --color-main-1: #ffffff;
+    --color-main-2: #dddddd;
+    --color-main-3: #cccccc;
+    --color-main-4: #aaaaaa;
+    --color-main-5: #888888;
+    --color-main-6: #666666;
+    --color-main-7: #444444;
+    --color-main-8: #222222;
+    --color-main-9: #000000;
+  }
+  .theme-light {
+    background-color: #f3f0f0;
+    --color-main-1: #000000;
+    --color-main-2: #222222;
+    --color-main-3: #444444;
+    --color-main-4: #666666;
+    --color-main-5: #888888;
+    --color-main-6: #aaaaaa;
+    --color-main-7: #cccccc;
+    --color-main-8: #dddddd;
+    --color-main-9: #ffffff;
+  }
+
+  .theme-orange {
+    --color-accent: #e34f00;
+  }
+  .theme-green {
+    --color-accent: #116002;
+  }
+  .theme-blue {
+    --color-accent: #2258ee;
+  }
+  .theme-yellow {
+    --color-accent: #f7ff04;
+  }
+  .theme-purple {
+    --color-accent: #b404ff;
+  }
+}
+
+body {
+  font-family: "sans serif" Cambria, Cochin, Georgia, Times, "Times New Roman";
+}
+
+@keyframes move {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 50%;
+  }
+  100% {
+    left: 100%;
+  }
+}
