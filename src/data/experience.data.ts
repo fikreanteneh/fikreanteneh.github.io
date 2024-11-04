@@ -11,10 +11,15 @@ const ExperienceData: ExperienceModel[] = [
     StartDate: "November 2023",
     EndDate: "Present",
     Bullets: [
-      "Managing remote learning sessions for 20 students from different African countries, facilitating 15 hours of weekly sessions.",
-      "Give lectures on Data Structure&algorithms,Help students solve 350+ problems weekly, and prepare weekly Internal contests.",
+      "Managing remote learning sessions on DSA for 16 students from 5 African countries, dedicating 15 hours a week.",
+      "Prepared and delivered 17 + DSA lectures and assisted students in solving 6000 + DSA problems so far.",
     ],
-    TechStack: [],
+    TechStack: [
+      { Stack: "DSA", Icon: icons.Leetcode },
+      { Stack: "Python", Icon: icons.Python },
+      { Stack: "Google Sheet", Icon: icons.GoogleSheet },
+      { Stack: "Google AppScript", Icon: icons.AppScript },
+    ],
     Links: [
       {
         Name: "Website",
@@ -31,14 +36,28 @@ const ExperienceData: ExperienceModel[] = [
     Location: "Remote, United States",
     StartDate: "June 2024",
     EndDate: "Present",
-    Bullets: [],
-    TechStack: [],
-    Links: [],
+    Bullets: [
+      "Implemented 12+ screens from Figma designs with state management and API integration using Flutter and BLoC.",
+      "Mentored 2 interns, guiding them through the codebase, Flutter development, and state management practices."
+    ],
+    TechStack: [
+      { Stack: "Flutter", Icon: icons.Flutter },
+      { Stack: "Dart", Icon: icons.Dart },
+      { Stack: "Bit Bucket", Icon: icons.BitBucket },
+      { Stack: "Postman", Icon: icons.Postman },
+    ],
+    Links: [
+      {
+        Name: "Website",
+        URL: "https://www.superstars.co/",
+        Icon: icons.Website
+      },
+    ],
   },
 
   {
     Icon: images.Eskalate,
-    Title: "Software Engineering Intern Intern",
+    Title: "Software Engineering Intern",
     Company: "Eskalate",
     Location: "Addis Ababa, Ethiopia",
     StartDate: "March 2024",
@@ -49,10 +68,10 @@ const ExperienceData: ExperienceModel[] = [
       "Developed a GraphQL API for Dime.",
     ],
     TechStack: [
-      { Stack: "Go", Icon: icons.go },
-      { Stack: "PostgreSQL", Icon: icons.postgresql },
-      { Stack: "GraphQL", Icon: icons.graphql },
-      { Stack: "Git", Icon: icons.git },
+      { Stack: "Go", Icon: icons.Go },
+      { Stack: "PostgreSQL", Icon: icons.Postgresql },
+      { Stack: "GraphQL", Icon: icons.GraphQL },
+      { Stack: "Git", Icon: icons.Git },
     ],
     Links: [
       {
@@ -77,9 +96,9 @@ const ExperienceData: ExperienceModel[] = [
     ],
     TechStack: [
       { Stack: "ASP.NET Core", Icon: icons.cs },
-      { Stack: "PostgreSQL", Icon: icons.postgresql },
-      { Stack: "Swagger", Icon: icons.swagger },
-      { Stack: "Git", Icon: icons.git },
+      { Stack: "PostgreSQL", Icon: icons.Postgresql },
+      { Stack: "Swagger", Icon: icons.Swagger },
+      { Stack: "Git", Icon: icons.Git },
     ],
     Links: [
       {

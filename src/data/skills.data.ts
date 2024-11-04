@@ -10,7 +10,7 @@ const SkillsData: SkillModel[] = [
   },
   {
     Name: "Go",
-    Icon: icons.go,
+    Icon: icons.Go,
     Category: ["Programming Language", "Backend", "System Programming"],
     Description: "",
   },
@@ -46,7 +46,7 @@ const SkillsData: SkillModel[] = [
   },
   {
     Name: "React.js",
-    Icon: icons.react,
+    Icon: icons.React,
     Category: ["Framework", "Frontend"],
     Description: "",
   },
@@ -107,7 +107,7 @@ const SkillsData: SkillModel[] = [
 
   {
     Name: "PostgreSQL",
-    Icon: icons.postgresql,
+    Icon: icons.Postgresql,
     Category: ["Database"],
     Description: "",
   },
@@ -158,13 +158,13 @@ const SkillsData: SkillModel[] = [
 
   {
     Name: "GraphQL",
-    Icon: icons.graphql,
+    Icon: icons.GraphQL,
     Category: ["Tools", "Backend"],
     Description: "",
   },
   {
     Name: "Git",
-    Icon: icons.git,
+    Icon: icons.Git,
     Category: ["Tools"],
     Description: "",
   },

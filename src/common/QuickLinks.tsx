@@ -9,10 +9,10 @@ import LinkModel from "../types/links.model";
 
 export const AddressLink: React.FC<{ icon: IconType, text: string, link: string }> = (prop) => {
     return (
-        <p className="w-auto no-underline cursor-pointer text-main" >
+        <p className="w-auto no-underline cursor-pointer text-main-1" >
             <prop.icon className="inline-block" />
-            <a href={prop.link} target="_blank" className="inline-block px-1 hover:text-primary">{prop.text}</a>
-            <IoCopy className="inline-block hover:text-primary" onClick={() => { navigator.clipboard.writeText(prop.text); toast.success("Copied to Clipboard!") }} />
+            <a href={prop.link} target="_blank" className="inline-block px-1 hover:text-accent">{prop.text}</a>
+            <IoCopy className="inline-block hover:text-accent" onClick={() => { navigator.clipboard.writeText(prop.text); toast.success("Copied to Clipboard!") }} />
         </p>
     )
 }
@@ -20,7 +20,7 @@ export const AddressLink: React.FC<{ icon: IconType, text: string, link: string 
 
 export const LinkButton: React.FC<{ icon: string, text: string, link: string }> = (prop) => {
     return (
-        <a href={prop.link} target="_blank" className="flex items-center p-4 space-x-4 text-lg transition-all duration-300 border cursor-pointer rounded-2xl text-main border-primary hover:bg-primary hover:shadow-md w-96">
+        <a href={prop.link} target="_blank" className="flex items-center p-4 space-x-4 text-lg transition-all duration-300 border cursor-pointer rounded-2xl text-main-1 border-accent hover:bg-accent hover:shadow-md w-96">
             <img className="h-12" src={prop.icon} alt="Icon" />
             <p className="text-5xl">{prop.text}</p>
         </a>
@@ -30,13 +30,13 @@ export const LinkButton: React.FC<{ icon: string, text: string, link: string }> 
 
 export const CustomButton: React.FC<{ icon?: string, text: string, link: string }> = (prop) => {
     return (
-        <a href={prop.link} target="_blank" className="flex items-center p-1 space-x-1 transition-all duration-300 border rounded-lg cursor-pointer bg-main hover:bg-hover hover:shadow-md">
+        <a href={prop.link} target="_blank" className="flex items-center p-1 space-x-1 transition-all duration-300 border rounded-lg cursor-pointer bg-main-1 hover:bg-main-8 hover:shadow-md">
             {/* <div className="bg-white rounded-[50%] object-cover"> */}
             {prop.icon && (
                 <img className="h-4" src={prop.icon} alt="Icon" />
             )}
             {/* </div> */}
-            <p className="text-lg text-bold text-reverse">{prop.text}</p>
+            <p className="text-lg text-bold text-main-9">{prop.text}</p>
         </a>
 
     )
@@ -70,8 +70,8 @@ export const AddressTable: React.FC<{ email: LinkModel, phone: LinkModel, locati
             </div>
         </div>
 
-        // <table className="w-full border rounded-lg border-hover">
-        //     <tbody className="divide-y divide-hover">
+        // <table className="w-full border rounded-lg border-main-8">
+        //     <tbody className="divide-y divide-main-8">
         //         <tr>
         //             <td className="p-1 text-sm whitespace-nowrap">E-mail</td>
         //             <td className="p-1 text-sm whitespace-nowrap">{email.Description}</td>

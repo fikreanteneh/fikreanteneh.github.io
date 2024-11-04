@@ -17,7 +17,7 @@ type EducationProps = {
 const Education = (props: { education: EducationProps }) => {
   const education = props.education
   return (
-    <div className="flex flex-wrap text-main" >
+    <div className="flex flex-wrap text-main-1" >
       {/* <img src={education.image} alt={education.Name} /> */}
       <div>
         <h2> {education.Name} <FaExternalLinkAlt className="inline" href={education.Link} /> ( {education.Description})</h2>

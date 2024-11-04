@@ -1,11 +1,12 @@
 import { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
-import About from "../pages/About";
+import Profile from "../pages/Profile";
 import Education from "../pages/Education";
 import Experience from "../pages/Experience";
 import Projects from "../pages/Projects";
 import Intro from './../pages/Intro';
 import Skills from "./../pages/Skills";
+
 
 
 const Home = () => {
@@ -34,18 +35,18 @@ const Home = () => {
     return (
         <>
             <Navbar />
-            <div className="grid h-screen max-w-screen-xl grid-cols-2 gap-4 mx-auto">
+            <div className="grid h-screen grid-cols-[50%_50%] mx-auto">
                 <div ref={introRef} className="h-screen">
                     <Intro />
                 </div>
-                <div ref={scrollableRef} className="h-screen overflow-y-auto">
+                <div ref={scrollableRef} className="w-full h-screen overflow-y-auto">
+                    <Profile />
                     <Experience />
                     <Projects />
-                    <Skills />
                     <Education />
-                    <About />
+                    <Skills />
                 </div>
-            </div>
+            </div >
         </>
     );
 }

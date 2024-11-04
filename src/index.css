@@ -4,36 +4,44 @@
 
 @layer base {
   .theme-dark {
-    background-color: #000000;
-    --color-main: #ffffff;
-    --color-main-medium: #bbbbbb;
-    --color-reverse: #000000;
-    --color-hover: #222222;
-    --color-background: #000000;
+    background-color: #191919;
+    --color-main-1: #ffffff;
+    --color-main-2: #dddddd;
+    --color-main-3: #cccccc;
+    --color-main-4: #aaaaaa;
+    --color-main-5: #888888;
+    --color-main-6: #666666;
+    --color-main-7: #444444;
+    --color-main-8: #222222;
+    --color-main-9: #000000;
   }
   .theme-light {
-    background-color: #ffffff;
-    --color-main: #000000;
-    --color-main-medium: #444444;
-    --color-reverse: #ffffff;
-    --color-hover: #dddddd;
-    --color-background: #ffffff;
+    background-color: #f3f0f0;
+    --color-main-1: #000000;
+    --color-main-2: #222222;
+    --color-main-3: #444444;
+    --color-main-4: #666666;
+    --color-main-5: #888888;
+    --color-main-6: #aaaaaa;
+    --color-main-7: #cccccc;
+    --color-main-8: #dddddd;
+    --color-main-9: #ffffff;
   }
 
   .theme-orange {
-    --color-primary: #e34f00;
+    --color-accent: #e34f00;
   }
   .theme-green {
-    --color-primary: #116002;
+    --color-accent: #116002;
   }
   .theme-blue {
-    --color-primary: #2258ee;
+    --color-accent: #2258ee;
   }
   .theme-yellow {
-    --color-primary: #f7ff04;
+    --color-accent: #f7ff04;
   }
   .theme-purple {
-    --color-primary: #b404ff;
+    --color-accent: #b404ff;
   }
 }
 

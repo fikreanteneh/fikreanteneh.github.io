@@ -12,7 +12,7 @@ export const LinkIcon: React.FC<LinkIconProps> = ({ icon, scale }) => {
             src={icon}
             onClick={() => { window.open(icon, "_blank") }}
             alt="Icon"
-            className={`inline m-1 h-${scale ? 4 * scale : 4} hover:cursor-pointer hover:scale-150 transition-all duration-150`}
+            className={`inline h-${scale ? 4 * scale : 4} hover:cursor-pointer transition-all duration-400`}
         />
     );
 };

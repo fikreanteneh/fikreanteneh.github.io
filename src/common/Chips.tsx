@@ -11,8 +11,8 @@ export const Chip: React.FC<ChipProps> = ({ label, isSelected, onClick }) => {
         <button
             onClick={onClick}
             className={`px-2 m-1 rounded-full border  ${isSelected
-                ? 'text-reverse bg-main'
-                : 'text-main bg-reverse'
+                ? 'text-main-9 bg-main-1'
+                : 'text-main-1 bg-main-9'
                 } transition-colors duration-100`}
         >
             {label}
