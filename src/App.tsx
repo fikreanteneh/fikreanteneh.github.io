@@ -1,6 +1,5 @@
 
 import { createBrowserRouter, createRoutesFromElements, Navigate, Route, RouterProvider } from 'react-router-dom';
-import 'react-toastify/dist/ReactToastify.css';
 import { ThemeProvider } from './ThemeProvider';
 import Home from './layouts/Home';
 
