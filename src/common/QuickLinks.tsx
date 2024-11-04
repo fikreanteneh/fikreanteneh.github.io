@@ -1,21 +1,18 @@
 import React from "react";
-import { IconType } from "react-icons";
 import { FaEnvelope, FaMapMarkerAlt, FaPhoneAlt } from "react-icons/fa";
-import { IoCopy } from "react-icons/io5";
-import { toast } from "react-toastify";
 import LinkModel from "../types/links.model";
 
 
 
-export const AddressLink: React.FC<{ icon: IconType, text: string, link: string }> = (prop) => {
-    return (
-        <p className="w-auto no-underline cursor-pointer text-main-1" >
-            <prop.icon className="inline-block" />
-            <a href={prop.link} target="_blank" className="inline-block px-1 hover:text-accent">{prop.text}</a>
-            <IoCopy className="inline-block hover:text-accent" onClick={() => { navigator.clipboard.writeText(prop.text); toast.success("Copied to Clipboard!") }} />
-        </p>
-    )
-}
+// export const AddressLink: React.FC<{ icon: IconType, text: string, link: string }> = (prop) => {
+//     return (
+//         <p className="w-auto no-underline cursor-pointer text-main-1" >
+//             {/* <prop.icon className="inline-block" />
+//             <a href={prop.link} target="_blank" className="inline-block px-1 hover:text-accent">{prop.text}</a>
+//             <IoCopy className="inline-block hover:text-accent" onClick={() => { navigator.clipboard.writeText(prop.text); toast.success("Copied to Clipboard!") }} /> */}
+//         </p>
+//     )
+// }
 
 
 export const LinkButton: React.FC<{ icon: string, text: string, link: string }> = (prop) => {
