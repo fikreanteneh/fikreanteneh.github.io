@@ -18,6 +18,7 @@ const Intro = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-10 mx-auto">
       <div>
+        <h1>In Construction</h1>
         <h1 className="text-3xl font-extrabold text-main-1">Hi! I am&nbsp;
           <span className="text-accent">
             Fikremariam A.Asegie
