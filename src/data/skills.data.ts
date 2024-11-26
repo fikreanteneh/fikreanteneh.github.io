@@ -108,25 +108,25 @@ const SkillsData: SkillModel[] = [
   {
     Name: "PostgreSQL",
     Icon: icons.Postgresql,
-    Category: ["Database"],
+    Category: ["Database", "Tools"],
     Description: "",
   },
   {
     Name: "MySQL",
     Icon: icons.MySQL,
-    Category: ["Database"],
+    Category: ["Database", "Tools"],
     Description: "",
   },
   {
     Name: "Redis",
     Icon: icons.Redis,
-    Category: ["Database"],
+    Category: ["Database", "Tools"],
     Description: "",
   },
   {
     Name: "MongoDB",
     Icon: icons.MongoDB,
-    Category: ["Database"],
+    Category: ["Database", "Tools"],
     Description: "",
   },
 
