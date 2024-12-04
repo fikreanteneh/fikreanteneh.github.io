@@ -1,4 +1,5 @@
-import portal from "./portal.png"
+import Portal from "./portal.png"
+import TrackMingle from "./track mingle.png"
 
-export default { portal }
+export default { Portal, TrackMingle }
 
