@@ -18,6 +18,7 @@ const Intro = () => {
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-10 mx-auto">
       <div>
+        <h1>In Construction</h1>
         <h1 className="text-3xl font-extrabold text-main-1">Hi! I am&nbsp;
           <span className="text-accent">
             Fikremariam A.Asegie
@@ -29,7 +30,7 @@ const Intro = () => {
         </h2>
         <div>
           <ul className="my-2 space-y-1">
-            <li onClick={() => scrollToSection("about")} className="transition-all duration-300 cursor-pointer hover:text-accent hover:translate-x-2">&rarr; Profile</li>
+            {/* <li onClick={() => scrollToSection("about")} className="transition-all duration-300 cursor-pointer hover:text-accent hover:translate-x-2">&rarr; Profile</li> */}
             <li onClick={() => scrollToSection("experience")} className="transition-all duration-300 cursor-pointer hover:text-accent hover:translate-x-2">&rarr; Experiences</li>
             <li onClick={() => scrollToSection("projects")} className="transition-all duration-300 cursor-pointer hover:text-accent hover:translate-x-2">&rarr; Projects</li>
             <li onClick={() => scrollToSection("education")} className="transition-all duration-300 cursor-pointer hover:text-accent hover:translate-x-2">&rarr; Education</li>
@@ -50,10 +51,10 @@ const Intro = () => {
                   <td className="px-3 py-1 text-main-1">Email</td>
                   <td className="px-3 py-1">{content.Links["Email"].Description}</td>
                 </tr>
-                <tr className="transition-all border-b hover:cursor-pointer hover:text-accent border-main-6" onClick={() => openLink(content.Links["Phone"].URL)}>
+                {/* <tr className="transition-all border-b hover:cursor-pointer hover:text-accent border-main-6" onClick={() => openLink(content.Links["Phone"].URL)}>
                   <td className="px-3 py-1 text-main-1">Phone</td>
                   <td className="px-3 py-1">{content.Links["Phone"].Description}</td>
-                </tr>
+                </tr> */}
                 <tr className="transition-all hover:cursor-pointer hover:text-accent" onClick={() => openLink(content.Links["Location"].URL)}>
                   <td className="px-3 py-1 text-main-1">Address</td>
                   <td className="px-3 py-1">{content.Links["Location"].Description}</td>

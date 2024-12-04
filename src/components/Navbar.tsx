@@ -26,24 +26,10 @@ import UseTheme, { darkTheme, lightTheme, ThemeContextType } from "../ThemeProvi
 const Navbar = () => {
     const theme = UseTheme() as ThemeContextType;
     return (
-        <header className="flex items-center justify-between">
-
+        <header className="fixed top-0 left-0 right-0 flex items-center justify-between px-6">
             <div className="">
                 <h1 className="hidden text-3xl font-bold md:block">Fikremariam</h1>
             </div>
-
-            {/* TODO: Truly Middling This */}
-            {/* <nav className="font-medium">
-                <ul className="flex items-center gap-3 text-md">
-                    <NavComponent to={"/home"} icon={IoHome} text={"Profile"} />
-                    <NavComponent to={"/skills"} icon={MdOutlineWorkHistory} text={"Skills"} />
-                    <NavComponent to={"/education"} icon={MdOutlineWorkHistory} text={"Education"} />
-                    <NavComponent to={"/experience"} icon={MdOutlineWorkHistory} text={"Experience"} />
-                    <NavComponent to={"/projects"} icon={GoProjectRoadmap} text={"Projects"} />
-                    <NavComponent to={"/contact"} icon={MdContacts} text={"Contact"} />
-                </ul>
-            </nav> */}
-
             <div className="">
                 <div className="mx-auto my-auto text-2xl border-2 border-transparent rounded-full hover:bg-main-8">
                     {
@@ -53,13 +39,23 @@ const Navbar = () => {
                     }
                 </div>
             </div>
-
         </header>
     )
 }
 
 export default Navbar
 
+
+{/* <nav className="font-medium">
+                <ul className="flex items-center gap-3 text-md">
+                    <NavComponent to={"/home"} icon={IoHome} text={"Profile"} />
+                    <NavComponent to={"/skills"} icon={MdOutlineWorkHistory} text={"Skills"} />
+                    <NavComponent to={"/education"} icon={MdOutlineWorkHistory} text={"Education"} />
+                    <NavComponent to={"/experience"} icon={MdOutlineWorkHistory} text={"Experience"} />
+                    <NavComponent to={"/projects"} icon={GoProjectRoadmap} text={"Projects"} />
+                    <NavComponent to={"/contact"} icon={MdContacts} text={"Contact"} />
+                </ul>
+            </nav> */}
 
 //TODO: Accent Color
 {/* <select id="theme-selector"
