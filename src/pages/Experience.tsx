@@ -38,11 +38,12 @@ const ECard: React.FC<{ experience: ExperienceModel }> = ({ experience }) => {
           {`${experience.Title} @ ${experience.Company}`}
         </h4>
         <p className="text-sm italic font-medium">{experience.StartDate} - {experience.EndDate}</p>
-        <ul className="my-2">
+        <p className="my-2 text-sm leading-normal text-justify">{experience.Bullets.join(" ")} </p>
+        {/* <ul className="my-2">
           {experience.Bullets.map((bullet, index) => (
             <li key={index} className="text-sm leading-normal text-justify list-none">{bullet}</li>
           ))}
-        </ul>
+        </ul> */}
         <div className="flex flex-wrap gap-2 my-2">
           {experience.TechStack.map((link) => (
             <LinkIcon icon={link.Icon} />

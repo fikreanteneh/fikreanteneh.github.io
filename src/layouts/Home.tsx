@@ -2,7 +2,6 @@ import { useEffect, useRef } from "react";
 import Navbar from "../components/Navbar";
 import Education from "../pages/Education";
 import Experience from "../pages/Experience";
-import Profile from "../pages/Profile";
 import Projects from "../pages/Projects";
 import Intro from './../pages/Intro';
 import Skills from "./../pages/Skills";

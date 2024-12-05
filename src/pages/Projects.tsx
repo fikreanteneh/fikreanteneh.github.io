@@ -24,7 +24,12 @@ const PCard: React.FC<{ project: ProjectModel }> = ({ project }) => {
     <li className="w-[95%] relative flex gap-4 p-2 transition-all rounded-md group hover:bg-main-8">
       <div className="flex-shrink-0 w-16">
         {/* TODO: The CLickable */}
-        <img className="object-cover w-full rounded-lg" src={project.Icon} alt={project.Icon} />
+        <img
+          className="object-cover w-full rounded-lg hover:cursor-pointer"
+          onClick={() => window.open(project.Links[0].URL, "_blank")}
+          src={project.Icon}
+          alt={project.Icon}
+        />
       </div>
       <div className="z-10 sm:order-2 sm:col-span-6">
         <h4
@@ -41,11 +46,12 @@ const PCard: React.FC<{ project: ProjectModel }> = ({ project }) => {
             />
           })}
         </div>
-        <ul className="my-2">
+        <p className="my-2 text-sm leading-normal text-justify">{project.Bullets.join(" ")} </p>
+        {/* <ul className="my-2">
           {project.Bullets.map(bullet => {
             return <li className="text-sm leading-normal text-justify">{bullet}</li>
           })}
-        </ul>
+        </ul> */}
         <div className="flex flex-wrap gap-2 my-2">
           {project.TechStack.map(link => {
             return <img className="h-4" src={link.Icon} alt={link.Stack} />

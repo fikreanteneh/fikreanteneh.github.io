@@ -23,7 +23,7 @@ const ECard: React.FC<{ education: EducationModel }> = ({ education }) => {
         >
             <div className="flex-shrink-0 w-16">
                 <img
-                    className="object-cover w-full rounded-lg" src={education.Icon} alt={education.Name}
+                    className="object-cover w-full rounded-lg cursor-pointer" src={education.Icon} alt={education.Name}
                     onClick={() => window.open(education.Link, "_blank")}
                 />
             </div>
@@ -33,12 +33,14 @@ const ECard: React.FC<{ education: EducationModel }> = ({ education }) => {
                     onClick={() => window.open(education.Link, "_blank")}
                 >{education.Name}</h4>
                 <p className="text-sm italic font-medium">{education.Degree}</p>
-                <p className="text-sm italic font-medium">{education.StartDate} - {education.EndDate}</p>
-                <ul className="my-2">
-                    {education.MainInformation.map(bullet => {
-                        return <li className="text-sm leading-normal text-justify">{bullet}</li>
-                    })}
-                </ul>
+                <p className="pb-2 text-sm italic font-medium">{education.StartDate} - {education.EndDate}</p>
+                {
+                    education.Information.map(bullet => {
+                        return <p className="text-justify">
+                            {bullet}
+                        </p>
+                    })
+                }
             </div>
         </li>
     )

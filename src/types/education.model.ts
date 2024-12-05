@@ -7,6 +7,5 @@ export default interface EducationModel {
   Degree: string;
   StartDate: string;
   EndDate: string;
-  MainInformation: [string, string][];
   Information: string[];
 }

@@ -1,7 +1,7 @@
 
 export const HeadlineLarge: React.FC<{ text: string, Icon?: React.FC<{ className?: string }>, className?: string }> = ({ text, Icon }) => {
     return (
-        <h2 className="flex items-center my-4 text-2xl font-extrabold">
+        <h2 className="top-0 flex items-center my-4 text-2xl font-extrabold">
             {Icon && <Icon className="inline mr-1" />}
             <span>{text}</span>
         </h2>

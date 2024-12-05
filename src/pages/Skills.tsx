@@ -12,7 +12,7 @@ const Skills = () => {
             <div>
                 <ul>
                     {
-                        categories.map((category, index) => {
+                        categories.map((category) => {
                             return <li className="flex py-2">
                                 <div className="flex items-top">
                                     <FaArrowRight className="mr-2" />
