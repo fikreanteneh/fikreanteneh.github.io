@@ -1,5 +1,5 @@
 import { FaArrowRight, FaTools } from "react-icons/fa";
-import { NormalButton } from "../common/Buttons";
+import { Chip } from "../common/Buttons";
 import { HeadlineLarge } from "../common/Text";
 import content from "../data";
 
@@ -14,13 +14,13 @@ const Skills = () => {
                     {
                         categories.map((category) => {
                             return <li className="flex py-2">
-                                <div className="flex items-top">
-                                    <FaArrowRight className="mr-2" />
+                                <div className="flex items-start">
+                                    <FaArrowRight className="mt-1 mr-2" />
                                 </div>
                                 <ul className="flex flex-wrap gap-1">
                                     {content.Skill.filter(skill => skill.Category.includes(category)).map((skill, skillIndex) => (
                                         <li key={skillIndex}>
-                                            <NormalButton name={skill.Name} icon={skill.Icon} scale={0.75} />
+                                            <Chip name={skill.Name} icon={skill.Icon} scale={0.75} />
                                         </li>
                                     ))}
                                 </ul>

@@ -26,7 +26,7 @@ const EducationData: EducationModel[] = [
     StartDate: "November 2022",
     EndDate: "October 2023",
     Information: [
-      "Learned and implemented different Data Structures and Algorithms. A2SV is a non-profit organization that up skills African students & connects them with top tech companies, A2SV students have achieved a 70% interview success rate and 50+ placements at Google, Bloomberg, Amazon, Databricks, Palantir & Linkedin,Solved 700+ problems on LeetCode and 200+ problems on Codeforces consistently throughout the year.",
+      "A2SV is a non-profit organization that up skills African students & connects them with top tech companies. Learned and implemented different Data Structures and Algorithms. Solved 700+ problems on LeetCode and 200+ problems on Codeforces consistently throughout the year.",
     ],
   },
   {
@@ -38,7 +38,9 @@ const EducationData: EducationModel[] = [
     Degree: "Software Engineering",
     StartDate: "May 2022",
     EndDate: "June 2023",
-    Information: [],
+    Information: [
+      "ALX is a 1 year online Software Engineering project based intensive program. Specialized in the backend. Completed over 60 mini projects and 2 portfolio projecs. All projects can be found on github."
+    ],
   },
 ];
 

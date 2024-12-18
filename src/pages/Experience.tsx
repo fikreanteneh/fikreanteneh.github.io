@@ -25,7 +25,7 @@ const ECard: React.FC<{ experience: ExperienceModel }> = ({ experience }) => {
       className="w-[95%] relative flex gap-4 p-2 transition-all rounded-md group hover:bg-main-8">
       <div className="flex-shrink-0 w-16">
         <img
-          className="object-cover w-full rounded-lg"
+          className="object-cover w-full rounded-lg hover:cursor-pointer"
           onClick={() => window.open(experience.Links[0].URL, "_blank")}
           src={experience.Icon} alt={experience.Company}
         />

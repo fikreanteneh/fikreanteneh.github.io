@@ -23,7 +23,7 @@ const LinksData: Record<string, LinkModel> = {
   Resume: {
     Name: "Resume",
     Description: "Resume",
-    URL: "https://drive.google.com/file/d/1g_kA8hf0ofIH8z94DMZZ2M4mu-8UjhIm/view?usp=sharing",
+    URL: "https://drive.google.com/file/d/1zWxkS7xQ4sMUcpoIkObHzcmZ-YPt344M/view?usp=sharing",
     Icon: assets.Icons.Resume,
   },
   Github: {
