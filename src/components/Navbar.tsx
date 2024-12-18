@@ -28,7 +28,7 @@ const Navbar = () => {
     return (
         <header className="fixed top-0 left-0 right-0 flex items-center justify-between px-6">
             <div className="">
-                <h1 className="hidden text-3xl font-bold md:block">Fikremariam</h1>
+                {/* <h1 className="hidden text-3xl font-bold md:block">Fikremariam</h1> */}
             </div>
             <div className="">
                 <div className="mx-auto my-auto text-2xl border-2 border-transparent rounded-full hover:bg-main-8">
