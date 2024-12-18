@@ -38,7 +38,7 @@ const Home = () => {
                 <div ref={introRef} className="h-screen">
                     <Intro />
                 </div>
-                <div ref={scrollableRef} className="w-full h-screen overflow-y-auto">
+                <div ref={scrollableRef} className="flex flex-col w-full h-screen gap-12 overflow-y-auto">
                     {/* <Profile /> */}
                     <Experience />
                     <Projects />

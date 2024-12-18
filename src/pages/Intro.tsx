@@ -1,4 +1,3 @@
-import { HiDownload } from "react-icons/hi";
 import Assets from "../assets";
 import { LinkIcon } from "../common/Icons";
 import content from "../data";
@@ -12,9 +11,11 @@ const Intro = () => {
     }
   };
 
+
   const openLink = (url: string) => {
     window.open(url, "_blank", "noopener,noreferrer")
   }
+
   return (
     <div className="flex flex-col items-center justify-center w-full h-full gap-10 mx-auto">
       <div>
@@ -38,12 +39,13 @@ const Intro = () => {
           </ul>
           <br />
           <div className="flex gap-2 my-5">
-            {/* TODO: Resume Filtration */}
-            <button className="px-2 py-1 space-x-1 transition-all duration-300 rounded-lg cursor-pointer text-main-9 bg-main-1 hover:bg-main-4">Resume</button>
-            <button className="px-2 py-1 space-x-1 transition-all duration-300 rounded-full cursor-pointer text-main-9 bg-main-1 hover:bg-main-4">
-              <HiDownload />
+            <button
+              onClick={() => openLink(content.Links["Resume"].URL)}
+              className="px-2 py-1 space-x-1 transition-all duration-300 rounded-lg cursor-pointer text-main-9 bg-main-1 hover:bg-main-4">
+              Resume
             </button>
           </div>
+
           <div className="border rounded-lg border-main-6 w-fit">
             <table className="w-fit">
               <tbody>
@@ -51,10 +53,10 @@ const Intro = () => {
                   <td className="px-3 py-1 text-main-1">Email</td>
                   <td className="px-3 py-1">{content.Links["Email"].Description}</td>
                 </tr>
-                {/* <tr className="transition-all border-b hover:cursor-pointer hover:text-accent border-main-6" onClick={() => openLink(content.Links["Phone"].URL)}>
+                <tr className="transition-all border-b hover:cursor-pointer hover:text-accent border-main-6" onClick={() => openLink(content.Links["Phone"].URL)}>
                   <td className="px-3 py-1 text-main-1">Phone</td>
                   <td className="px-3 py-1">{content.Links["Phone"].Description}</td>
-                </tr> */}
+                </tr>
                 <tr className="transition-all hover:cursor-pointer hover:text-accent" onClick={() => openLink(content.Links["Location"].URL)}>
                   <td className="px-3 py-1 text-main-1">Address</td>
                   <td className="px-3 py-1">{content.Links["Location"].Description}</td>

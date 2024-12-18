@@ -13,7 +13,6 @@ const ProjectsData: ProjectModel[] = [
             "Creating an Express.js API server for authentication and CRUD oper ations, using PostgreSQL as the database.",
         ],
         Picture: [
-            assets.Projects.TrackMingle,
         ],
         TechStack: [
             { Stack: "Go", Icon: assets.Icons.Go },
@@ -27,7 +26,7 @@ const ProjectsData: ProjectModel[] = [
             { Icon: assets.Icons.Github, URL: "https://github.com/fikreanteneh/TrackMingle", Name: "GitHub" },
         ],
         Achievements: [],
-        Icon: assets.Projects.Portal
+        Icon: assets.Projects.TrackMingle
     },
     {
         Name: "A2SV Chrome Extension",
@@ -37,9 +36,6 @@ const ProjectsData: ProjectModel[] = [
             "Automated submission of 50,500+ solutions, saving hours and allowing them to focus solely on problem-solving."
         ],
         Picture: [
-            assets.Projects.Portal,
-            assets.Projects.Portal,
-            assets.Projects.Portal,
         ],
         TechStack: [
             { Stack: "TypeScript", Icon: assets.Icons.TypeScript },
@@ -50,7 +46,7 @@ const ProjectsData: ProjectModel[] = [
             { Icon: assets.Icons.Github, URL: "https://chromewebstore.google.com/detail/a2sv-companion/gjkcocfkdcjndniapjeclihmlelkgoil", Name: "Web Store" }
         ],
         Achievements: [],
-        Icon: assets.Projects.Portal
+        Icon: assets.Projects.ChromeExtension
     },
     {
         Name: "Mini Distributed File System",
@@ -61,7 +57,6 @@ const ProjectsData: ProjectModel[] = [
             "Used a master server for handling le metadata and chunk server status, while chunk server is used for data storage."
         ],
         Picture: [
-            assets.Projects.Portal,
         ],
         TechStack: [
             { Stack: "Go", Icon: assets.Icons.Go },
@@ -70,7 +65,7 @@ const ProjectsData: ProjectModel[] = [
             { Icon: assets.Icons.Github, URL: "https://github.com/fikreanteneh/DistributedFileSystem", Name: "GitHub" },
         ],
         Achievements: [],
-        Icon: assets.Projects.Portal
+        Icon: assets.Projects.DFS
     },
 
     {
@@ -81,7 +76,6 @@ const ProjectsData: ProjectModel[] = [
             "Developed a database and API for handling grade submissions, registrations, announcements, and resource sharing."
         ],
         Picture: [
-            assets.Projects.Portal,
         ],
         TechStack: [
             { Stack: "JavaScript", Icon: assets.Icons.JavaScript },
